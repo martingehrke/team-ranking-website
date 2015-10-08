@@ -1,0 +1,13 @@
+###
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^log-in$ /rank/login.php [L]
+RewriteRule ^register$ /rank/signup.php [L]
+RewriteRule ^change-email$ /rank/manage.php [L]
+RewriteRule ^recover-password$ /rank/change.php [L]
+RewriteRule ^recover-password/([a-f0-9]{32})$ /rank/change.php?key=$1 [L]
+RewriteRule ^activate/([a-f0-9]{32})$ /rank/user.php?activate=$1 [L]
+
+RewriteRule ^logout$ /rank/user.php?logout [L]
+###
